@@ -1,5 +1,8 @@
 Camicia
 Computer
-Iphone
 Maglione
+Pantaloni
 Playstation
+Scarpe
+Switch
+Tv

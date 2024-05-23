@@ -12,11 +12,7 @@ public class WishList {
 
         // Leggi i prodotti dal file
         ArrayList<String> wishList = FileHandler.reader(filePath);
-
-        // Se il file era vuoto o non esisteva, inizializza una nuova lista
-        if (wishList == null) {
-            wishList = new ArrayList<>();
-        }
+        System.out.println("Articoli inseriti: " + wishList.size());
         boolean choice = true;
         String c;
         String name = null;
@@ -29,7 +25,7 @@ public class WishList {
                 System.out.print("Inserisci l'articolo: ");
                 name = scanner.nextLine();
                 wishList.add(name);
-                System.out.println("Articoli inseriti: " + wishList.size());
+
             } else if (Objects.equals(c, "n")) {
                 choice = false;
             } else {
@@ -40,5 +36,6 @@ public class WishList {
         Collections.sort(wishList);
         FileHandler.writer(wishList, "./resources/wishList.txt");
         System.out.println("Lista ordinata: " + wishList);
+        System.out.println("Articoli aggiornati: " + wishList.size());
     }
 }
